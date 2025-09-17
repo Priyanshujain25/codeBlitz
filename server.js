@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // Setup socket.io with CORS (important for production)
 const io = new Server(server, {
   cors: {
-    origin:process.env.FRONTEND_URL || "http://localhost:3000", // you can replace "*" with your frontend URL later
+    origin:"*", // you can replace "*" with your frontend URL later
     methods: ["GET", "POST"],
   },
 });
